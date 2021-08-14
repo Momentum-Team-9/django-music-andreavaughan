@@ -1,0 +1,10 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h1>{{ album.title }}</h1>
+<div>
+    {% for track in track %}
+        <div>{{ track.name }}</div>
+    {% endfor %}
+</div>
+{% endblock %}

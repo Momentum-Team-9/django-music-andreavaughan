@@ -3,12 +3,18 @@
 {% block content %}
 <h1>Albums in Music Collection</h1>
 
+<p><a href="{% url 'add_album' %}">Add New Album to List</a></p>
+
 <div class="albums">
     {% for album in albums %}
         <div class="album-container">
             <h2>{{ album.title }}</h2>
             <p>{{ album.artist }}</p>
             <p>{{ album.release_year }}</p>
+        </div>
+        <div>
+            <!-- add links here -->
+            <a href="{% url 'view_album' pk=album.pk %}">View Album Tracks</a>
         </div>
     {% endfor %}
 </div>

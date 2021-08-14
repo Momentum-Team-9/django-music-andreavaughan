@@ -27,3 +27,13 @@ def add_album(request):
         'musiccollection/add_album.html',
         {'form': form}
         )
+
+
+def view_album(request, pk):
+    album = get_object_or_404(Album, pk=pk)
+    tracks = album.track.all()
+    return render(
+        request,
+        'musiccollection/view_album.html', 
+        {'album': album, 'tracks': tracks}
+    )

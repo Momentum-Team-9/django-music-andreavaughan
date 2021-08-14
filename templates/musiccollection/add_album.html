@@ -2,7 +2,9 @@
 
 {% block content %}
 <h1>Add Album to Collection</h1>
-
+<div>
+    <p><a href="{% url 'list_albums' %}">Back to Album List</a></p>
+</div>
 <div>
     <form action="{% url 'add_album' %}" method="POST">
         {% csrf_token %}
@@ -12,4 +14,5 @@
         </div>
     </form>
 </div>
+
 {% endblock %}
