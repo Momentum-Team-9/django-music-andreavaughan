@@ -21,7 +21,8 @@ from musiccollection import views as musiccollection_views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', musiccollection_views.list_albums, name='list_albums')
+    path('', musiccollection_views.list_albums, name='list_albums'),
+    path('albums/new', musiccollection_views.add_album, name='add_album'),
 ]
 
 
