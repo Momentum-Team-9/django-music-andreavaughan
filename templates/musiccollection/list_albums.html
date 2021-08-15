@@ -16,6 +16,7 @@
             <!-- add links here -->
             <a href="{% url 'view_album' pk=album.pk %}">View Album Tracks</a>
             <a href="{% url 'edit_album' pk=album.pk %}">Edit Album</a>
+            <a href="{% url 'delete_album' pk=album.pk %}">Delete Album</a>
         </div>
     {% endfor %}
 </div>
