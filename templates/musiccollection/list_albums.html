@@ -15,6 +15,7 @@
         <div>
             <!-- add links here -->
             <a href="{% url 'view_album' pk=album.pk %}">View Album Tracks</a>
+            <a href="{% url 'edit_album' pk=album.pk %}">Edit Album</a>
         </div>
     {% endfor %}
 </div>

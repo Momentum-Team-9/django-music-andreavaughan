@@ -3,7 +3,7 @@
 {% block content %}
 <h1>{{ album.title }}</h1>
 <div>
-    {% for track in track %}
+    {% for track in album.track.all %}
         <div>{{ track.name }}</div>
     {% endfor %}
 </div>

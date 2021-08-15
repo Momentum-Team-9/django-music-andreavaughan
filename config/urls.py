@@ -23,7 +23,8 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('', musiccollection_views.list_albums, name='list_albums'),
     path('albums/new', musiccollection_views.add_album, name='add_album'),
-    path('albums/<int:pk>', musiccollection_views.view_album, name='view_album')
+    path('albums/<int:pk>', musiccollection_views.view_album, name='view_album'),
+    path('albums/<int:pk>/edit', musiccollection_views.edit_album, name='edit_album'), 
 ]
 
 
