@@ -7,17 +7,26 @@
 
 <div class="albums">
     {% for album in albums %}
-        <div class="album-container">
-            <h2>{{ album.title }}</h2>
-            <p>{{ album.artist }}</p>
-            <p>{{ album.release_year }}</p>
+    <div class="card">
+        <div class="card-image">
+            <figure class="image is-4by3">
+                <img src="{{ album.album_art }}">
+            </figure>
         </div>
-        <div>
-            <!-- add links here -->
-            <a href="{% url 'view_album' pk=album.pk %}">View Album Tracks</a>
-            <a href="{% url 'edit_album' pk=album.pk %}">Edit Album</a>
-            <a href="{% url 'delete_album' pk=album.pk %}">Delete Album</a>
+        <div class="card-content">
+            <div class="content">
+                <h2>{{ album.title }}</h2>
+                <p>{{ album.artist }}</p>
+                <p>{{ album.release_year }}</p>
+            </div>
         </div>
+        <footer class="card-footer">
+            <a href="{% url 'view_album' pk=album.pk %}" class="card-footer-item">View Album Tracks</a>
+            <a href="{% url 'edit_album' pk=album.pk %}" class="card-footer-item">Edit Album</a>
+            <a href="{% url 'delete_album' pk=album.pk %}" class="card-footer-item">Delete Album</a>
+        </footer>
+    </div>
     {% endfor %}
 </div>
+
 {% endblock %}
