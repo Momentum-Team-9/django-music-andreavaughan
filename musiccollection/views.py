@@ -60,7 +60,7 @@ def delete_album(request, pk):
     album = get_object_or_404(Album, pk=pk)
     if request.method == 'POST':
         album.delete()
-        return redirect(to='list_contacts')
+        return redirect(to='list_albums')
 
     return render(
         request,

@@ -22,3 +22,10 @@ class Track(models.Model):
     def __str__(self):
         return f'{self.name}, {self.featured_artist}'
 
+
+# class Artist(models.Model):
+#     albums = models.ManyToManyField(Album)
+#     name = models.CharField(max_length=255)
+    
+#     def __str__(self):
+#         return f'{self.name}'
